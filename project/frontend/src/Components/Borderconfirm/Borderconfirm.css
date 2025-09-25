@@ -1,0 +1,128 @@
+/* Container for all cards */
+.order-display-container {
+  display: flex;
+  flex-direction: column; /* vertical layout */
+  align-items: center;
+  font-family:'Times New Roman', Times, serif, sans-serif;
+  padding: 30px 20px;
+  min-height: 100vh;
+  background: url("./disorder-bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Each order card */
+.order-card {
+  background: #d5f1a0;
+  border: 2px solid #01ee09;
+  border-radius: 15px;
+  padding: 20px 25px;
+  margin: 15px 0; /* small gap between cards */
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0px 6px 20px rgba(0,0,0,0.15);
+  text-align: left;
+  transition: transform 0.2s ease-in-out, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.order-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 12px 25px rgba(0,0,0,0.25);
+}
+
+/* Headings inside card */
+.order-card h1 {
+  font-size: 16px;
+  color: #2215d6;
+  margin: 5px 0;
+  font-weight: bold;
+  font-size: large;
+}
+
+/* Card title */
+.order-card h2 {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #ff0000;
+  text-shadow: 1px 1px 2px #81c784;
+}
+
+/* Button group inside card (Update + Delete + Pay) */
+.order-card .button-group {
+  display: flex;
+  justify-content: flex-start; /* left align inside card */
+  gap: 10px;
+  margin-top: 12px;
+}
+
+/* Update button (Green) */
+.update-btn {
+  padding: 6px 12px;
+  background: linear-gradient(to right, #35fa3b, #5ff166);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none; /* for <a> */
+}
+.update-btn:hover {
+  background: linear-gradient(to right, #388e3c, #66bb6a);
+  transform: scale(1.05);
+}
+
+/* Delete button (Red) */
+.delete-btn {
+  padding: 6px 12px;
+  background: linear-gradient(to right, #f44336, #e57373);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.delete-btn:hover {
+  background: linear-gradient(to right, #c62828, #ef5350);
+  transform: scale(1.05);
+}
+
+/* Pay button (Orange) */
+.pay-btn {
+  padding: 6px 12px;
+  background: linear-gradient(to right, #ff9800, #ffc107);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.pay-btn:hover {
+  background: linear-gradient(to right, #f57c00, #ffa000);
+  transform: scale(1.05);
+}
+
+/* Download button below card */
+.download-btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px; /* small gap below card */
+}
+
+.download-btn {
+  padding: 8px 16px;
+  background: linear-gradient(to right, #1976d2, #2a7fc4);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.download-btn:hover {
+  background: linear-gradient(to right, #1565c0, #42a5f5);
+  transform: scale(1.05);
+}

@@ -1,0 +1,67 @@
+/* Page background */
+.bcrop-page {
+  background-color: #0522c5; /* green page background */
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Card */
+.bcrop-card {
+  width: 280px;
+  background-color: #ddf7e7ff; /* light card background for contrast */
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.bcrop-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Image */
+.bcrop-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Details inside card */
+.bcrop-details {
+  padding: 12px;
+  text-align: left;
+}
+
+.bcrop-details h2 {
+  margin: 0 0 8px;
+  color: #2e7d32;
+}
+
+.bcrop-details p {
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+/* Add Order Button */
+.bcrop-btn {
+  padding: 10px 20px;
+  background-color: rgb(40, 250, 21); /* red button */
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+  align-items: center;
+}
+
+.bcrop-btn:hover {
+  background-color: #1dc275;
+}

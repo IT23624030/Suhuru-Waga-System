@@ -1,0 +1,76 @@
+.bccancel-page {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #83e683, #9df09a,rgb(47, 175, 47)); /* soft teal gradient */
+  min-height: 100vh;
+  display:flow-root;
+  align-items: center;
+  
+}
+.bccancel-form-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px 40px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  font-family:'Times New Roman', Times, serif;
+  font-weight: bold;
+}
+
+
+/* Form title */
+.bccancel-form-container h2 {
+  text-align: center;
+  margin-bottom: 30px;   /* reduced from 30px */
+  color: #0c4422;
+  font-size: 28px;
+  font-style: inherit;
+}
+
+/* Input fields */
+.bccancel-form-container input[type="text"],
+.bccancel-form-container select,
+.bccancel-form-container textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 8px;   /* reduced from 20px */
+  border-radius: 8px;
+  border: 1px solid #021d0b;
+  font-size: 16px;
+  resize: vertical;
+  background-color: rgb(178, 240, 166);
+}
+
+/* Labels */
+.bccancel-form-container label {
+  display: block;
+  margin-bottom: 8px;    /* smaller gap before input */
+  font-weight: bold;
+  color: #000000;
+  font-size: 20px;
+}
+
+
+/* Textarea for reason */
+.bccancel-form-container textarea {
+  min-height: 120px; /* big text area */
+}
+
+/* Submit button */
+.bccancel-form-container button[type="submit"] {
+  background-color: #1f9c1f;
+  color: rgb(241, 235, 235);
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.bccancel-form-container button[type="submit"]:hover {
+  background-color: #1e8449;
+}

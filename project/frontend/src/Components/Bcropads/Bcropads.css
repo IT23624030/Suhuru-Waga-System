@@ -1,0 +1,54 @@
+/* Page background for the whole Bcropads page */
+.bycropads-container {
+  background: linear-gradient(135deg, #d4fc79, #96e6a1); /* light green */
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.bysearch-container {
+  display: flex;
+  flex-direction: row;   /* ✅ force in one line */
+  flex-wrap: nowrap;     /* ✅ prevent wrapping */
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+  background: linear-gradient(135deg, #d4fc79, #96e6a1);
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  overflow-x: auto;      /* ✅ if too many fields, scroll horizontally instead of breaking */
+}
+
+
+.bysearch-container input,
+.bysearch-container select {
+  padding: 10px 12px;
+  border: 1px solid #080808;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.bysearch-container input:focus,
+.bysearch-container select:focus {
+  border-color: #16a34a;
+  box-shadow: 0 0 5px rgba(22, 24, 23, 0.5);
+}
+
+.bysearch-container button {
+  padding: 10px 18px;
+  background-color: #36c54eff;
+  color: #ffffff;
+  font-weight: bold;
+  border: #000000;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.bysearch-container button:hover {
+  background-color: #0a973e;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}

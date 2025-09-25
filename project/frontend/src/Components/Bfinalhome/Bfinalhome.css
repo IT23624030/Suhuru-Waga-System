@@ -1,0 +1,93 @@
+/* ---------- Page Wrapper ---------- */
+.bfinalhome-page {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #d4fc79, #96e6a1);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------- Banner ---------- */
+.bfinalhome-banner {
+  width: 100%;
+  height: 250px;
+  background-image: url('./Bhomef.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bfinalhome-banner::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.4);
+  z-index: 0;
+}
+
+.bfinalhome-banner h1 {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  font-size: 3rem;
+  text-align: center;
+  text-shadow: 2px 2px 12px rgba(0,0,0,0.7);
+  margin: 0;
+}
+
+/* ---------- Content Section ---------- */
+.bfinalhome-content {
+  max-width: 1200px;
+  margin: -50px auto 50px auto; /* overlap slightly on banner */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  padding: 0 20px;
+  z-index: 1;
+}
+
+/* ---------- Feature Card ---------- */
+.bfeature-card {
+  background-color: #fff;
+  padding: 25px 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bfeature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+/* Icon */
+.bfeature-icon {
+  font-size: 40px;
+  color: rgb(45, 199, 70);
+  margin-bottom: 15px;
+}
+
+/* Card title */
+.bfeature-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  color: #25c52d;
+}
+
+/* Card paragraph */
+.bfeature-card p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .bfinalhome-banner h1 { font-size: 2rem; }
+  .bfeature-card { padding: 20px 15px; }
+}
