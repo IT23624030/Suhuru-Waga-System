@@ -1,0 +1,411 @@
+/* Custom Properties for easy theme changes */
+:root {
+  --primary-green: #4CAF50; /* A vibrant, natural green */
+  --dark-green: #2E7D32;   /* Darker green for contrast */
+  --light-green: #A5D6A7;  /* Lighter green for accents */
+  --earth-brown: #795548;  /* Warm brown */
+  --soft-white: #90f586;   /* Very light, creamy white */
+  --text-dark: #333333;
+  --text-light: #555555;
+  --bg-gradient: linear-gradient(135deg, #e0f2f1 0%, #a5d6a7 100%); /* Subtle background gradient */
+}
+
+/* Base Styles */
+.about-page-wrapper {
+  font-family: 'Segoe UI', 'Roboto', sans-serif; /* Modern, readable font */
+  color: var(--text-dark);
+  line-height: 1.6;
+  background: var(--bg-gradient); /* Light gradient for a fresh feel */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Section Styling */
+.about-section {
+  padding: 80px 0;
+  overflow: hidden; /* Important for animation reveals */
+}
+
+.about-section:nth-child(even) { /* Alternate background for sections */
+  background-color: var(--soft-white);
+}
+
+.section-title {
+  font-size: 2.8em;
+  color: var(--dark-green);
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.section-title::after { /* Underline effect */
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -15px;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background-color: var(--primary-green);
+  border-radius: 2px;
+}
+
+/* Hero Section */
+.hero-about {
+  background: url('https://source.unsplash.com/random/1920x800/?green-field,sunrise-farm') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 150px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1; /* Ensure text is above background pseudo-element */
+  animation: heroFadeIn 1.5s ease-out; /* Hero section initial fade */
+}
+
+.hero-about::before { /* Overlay for better text readability */
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}
+
+@keyframes heroFadeIn {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+.hero-about h1 {
+  font-size: 4.5em;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+  animation: textGrow 1s ease-out 0.5s forwards; /* Text animation */
+  opacity: 0; /* Hidden initially */
+}
+
+.hero-about .subtitle {
+  font-size: 1.8em;
+  font-style: italic;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+  animation: textFadeIn 1s ease-out 1s forwards; /* Subtitle animation */
+  opacity: 0; /* Hidden initially */
+}
+
+@keyframes textGrow {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes textFadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* Content Blocks with Image */
+.about-section .container {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.about-section .content-block {
+  flex: 1;
+  padding: 20px;
+}
+
+.about-section .image-block {
+  flex: 1;
+  text-align: center;
+}
+
+.about-section .image-block img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  transition: transform 0.5s ease-in-out; /* Image hover effect */
+}
+
+.about-section .image-block img:hover {
+  transform: scale(1.02);
+}
+
+.introduction .content-block h2 {
+  text-align: left;
+}
+.introduction .section-title::after {
+    left: 0;
+    transform: translateX(0);
+}
+
+
+/* Mission & Values List */
+.mission-values ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.mission-values ul li {
+  font-size: 1.1em;
+  margin-bottom: 15px;
+  padding-left: 30px;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.mission-values ul li::before { /* Custom bullet point */
+  content: '🌱'; /* Leaf or sprout emoji */
+  position: absolute;
+  left: 0;
+  color: var(--primary-green);
+  font-size: 1.2em;
+}
+
+.mission-values ul li:hover {
+  transform: translateX(5px); /* Subtle slide effect on hover */
+}
+
+
+/* Team Section */
+.team-section {
+  background-color: var(--soft-white);
+  padding: 100px 0;
+}
+
+.team-intro {
+  text-align: center;
+  font-size: 1.2em;
+  margin-bottom: 50px;
+  color: var(--text-light);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.team-member {
+  text-align: center;
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.team-member img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 4px solid var(--light-green); /* Green border around avatar */
+  transition: transform 0.3s ease;
+}
+
+.team-member:hover img {
+  transform: rotate(5deg); /* Subtle rotate on hover */
+}
+
+.team-member h3 {
+  font-size: 1.5em;
+  color: var(--dark-green);
+  margin-bottom: 5px;
+}
+
+.team-member p {
+  color: var(--text-light);
+  font-style: italic;
+}
+
+
+/* Call to Action Section */
+.call-to-action {
+  background: var(--dark-green);
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.call-to-action .section-title {
+  color: white;
+}
+
+.call-to-action .section-title::after {
+  background-color: white;
+}
+
+.call-to-action p {
+  max-width: 700px;
+  margin: 20px auto 40px auto;
+  font-size: 1.2em;
+}
+
+.cta-button {
+  display: inline-block;
+  background: var(--primary-green);
+  color: white;
+  padding: 15px 30px;
+  border-radius: 50px; /* Pill shape */
+  text-decoration: none;
+  font-size: 1.2em;
+  font-weight: bold;
+  letter-spacing: 1px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background: var(--light-green);
+  color: var(--dark-green);
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+}
+
+/* Scroll Reveal Animations (JavaScript is needed to trigger these) */
+.reveal-section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.reveal-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .about-section .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-section .content-block,
+  .about-section .image-block {
+    padding: 0; /* Remove padding specific to flex items */
+  }
+  .about-section .image-block {
+    order: -1; /* Image appears above text on smaller screens */
+    margin-bottom: 30px;
+  }
+  .about-section.mission-values .container.reverse-on-mobile .image-block {
+      order: unset; /* Revert order for the mission values section if needed */
+  }
+  .about-section .section-title {
+      text-align: center;
+  }
+  .about-section .section-title::after {
+      left: 50%;
+      transform: translateX(-50%);
+  }
+  .hero-about h1 {
+    font-size: 3.5em;
+  }
+  .hero-about .subtitle {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-about {
+    padding: 100px 15px;
+  }
+  .hero-about h1 {
+    font-size: 2.8em;
+  }
+  .hero-about .subtitle {
+    font-size: 1.2em;
+  }
+  .section-title {
+    font-size: 2em;
+  }
+  .about-section {
+    padding: 60px 0;
+  }
+  .team-grid {
+      grid-template-columns: 1fr; /* Stack team members on very small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-about h1 {
+    font-size: 2em;
+  }
+  .hero-about .subtitle {
+    font-size: 1em;
+  }
+  .section-title {
+    font-size: 1.8em;
+  }
+  .cta-button {
+    font-size: 1em;
+    padding: 12px 25px;
+  }
+}
+.call-to-action {
+  background: #1a237e; /* Deep blue for contrast */
+  color: #312911;      /* Soft yellow text */
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.call-to-action .section-title {
+  color: #1b9b3f;
+}
+
+.call-to-action .section-title::after {
+  background-color: #24ce32;
+}
+
+.call-to-action p {
+  max-width: 700px;
+  margin: 20px auto 40px auto;
+  font-size: 1.2em;
+  color: #413c0f;
+}
+
+.cta-button {
+  display: inline-block;
+  background: #ffb300; /* Amber */
+  color: #1a237e;     /* Deep blue text */
+  padding: 15px 30px;
+  border-radius: 50px; /* Pill shape */
+  text-decoration: none;
+  font-size: 1.2em;
+  font-weight: bold;
+  letter-spacing: 1px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #98957d; /* Light yellow */
+  color: #1a237e;
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+}

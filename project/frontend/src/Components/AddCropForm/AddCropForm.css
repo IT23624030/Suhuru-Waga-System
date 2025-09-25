@@ -1,0 +1,89 @@
+/* Full page layout */
+.bycfadd-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  
+    background-image: url('./cropform.jpg');
+  background-size: cover;
+}
+
+/* Wrapper takes remaining space between header & footer */
+.bycfadd-form-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center; /* center horizontally */
+  align-items: center;     /* center vertically */
+  padding: 20px;
+}
+
+/* Form box */
+.bycfadd-crop-container {
+  
+
+  padding: 30px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  font-family: Arial, sans-serif;
+  margin-left:500px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  margin-right: 400px;
+}
+
+/* Title */
+.bycfadd-crop-container h2 {
+  text-align: center;
+  font-size: 20px;
+  color: #145a32;
+  margin-bottom: 15px;
+}
+
+/* Labels */
+.bycfadd-crop-container label {
+  display: block;
+  font-weight: 600;
+  font-size: 13px;
+  color: #333;
+  margin-top:0;
+}
+
+/* Inputs */
+.bycfadd-crop-container input[type="text"],
+.bycfadd-crop-container input[type="number"],
+.bycfadd-crop-container input[type="file"] {
+  width: 100%;
+  padding: 8px 10px;
+  margin-bottom:0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 13px;
+  background: #f9f9f9;
+  margin-top:0;
+}
+
+.bycfadd-crop-container input:focus {
+  border-color: #28a745;
+  background: #eaffea;
+  outline: none;
+}
+
+/* Button */
+.bycfadd-crop-container button {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(to right, #0f9d58, #34a853);
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.bycfadd-crop-container button:hover {
+  background: linear-gradient(to right, #0c7a44, #2b8d4a);
+  transform: scale(1.02);
+}

@@ -1,0 +1,178 @@
+/* === Container === */
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-image: url('./f.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* === Wrapper for left panel + form === */
+.signup-wrapper {
+    display: flex;
+    width: 950px;
+    max-width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    background: white;
+}
+
+/* === Left side panel === */
+.signup-sidero {
+    flex: 1;
+    background: linear-gradient(to bottom, #0ce672, #2d7c0e);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding: 20px;
+}
+
+.signup-title {
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* === Right side form container === */
+.register-form-containerr {
+    flex: 2;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #fff;
+}
+
+/* === Form === */
+.register-formro {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.register-formro h2 {
+    margin-bottom: 5px;
+    color: #333;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.register-formro p {
+    margin-bottom: 20px;
+    color: #666;
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+/* === Input groups === */
+.input-groupro,
+.input-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.register-formro input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    transition: 0.3s;
+}
+
+.register-formro input:focus {
+    border-color: #2d7c0e;
+    outline: none;
+    box-shadow: 0 0 6px rgba(45, 124, 14, 0.3);
+}
+
+/* === Button === */
+.signup-btn {
+    padding: 12px;
+    background: linear-gradient(135deg, #2d7c0e, #4CAF50);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: 0.3s;
+    display: block;
+    width: 100%;
+}
+
+.signup-btn:hover {
+    background: linear-gradient(135deg, #1b4d09, #3a913d);
+}
+
+/* === Login Links === */
+.login-links {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    color: #666;
+}
+
+.login-links a {
+    color: #2d7c0e;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-links a:hover {
+    text-decoration: underline;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+    .signup-wrapper {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .signup-sidero {
+        border-radius: 20px 20px 0 0;
+    }
+
+    .register-form-containerr {
+        padding: 20px;
+    }
+
+    .input-groupro {
+        flex-direction: column;
+    }
+
+    .signup-btn {
+        width: 100%;
+    }
+}
+
+/* Make Full Name, Experience, and Agri Activities fields white */
+input[name="fullname"],
+input[name="experience"],
+input[name="agri_activities"] {
+    background: white;
+    border: 1px solid #ddd;
+    color: #333;
+}
+
+/* Optional: Add focus style for better UI */
+input[name="fullname"]:focus,
+input[name="experience"]:focus,
+input[name="agri_activities"]:focus {
+    border-color: #2d7c0e;
+    box-shadow: 0 0 6px rgba(45, 124, 14, 0.3);
+    outline: none;
+}
+
+

@@ -1,0 +1,125 @@
+.alerts-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 32px 24px;
+    background: #f9f9f9;
+    border-radius: 14px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.09);
+}
+
+.alerts-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+}
+
+.alerts-header h1 {
+    color: #222;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.alert-list {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.alert-card {
+    background: #fff;
+    border: 1px solid #e57373;
+    border-radius: 8px;
+    padding: 18px 22px;
+    box-shadow: 0 1px 6px rgba(211,47,47,0.04);
+    transition: box-shadow 0.2s;
+}
+
+.alert-card:hover {
+    box-shadow: 0 4px 18px rgba(211, 47, 47, 0.09);
+}
+
+/* Hero Image and Text */
+.alerts-hero-image {
+    background: url('alert.png') no-repeat center center/cover;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    position: relative;
+    z-index: 1;
+}
+
+.alerts-hero-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: -1;
+}
+
+.hero-text-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-title {
+    font-size: 3.5em;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.typing-container {
+    min-height: 24px;
+}
+
+.typing-text {
+    font-size: 1.2em;
+    font-weight: 400;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid white;
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: white }
+}
+
+/* Alert type label styling */
+.alert-type {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8em;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+/* Specific colors for different alert types */
+.alert-type.weather {
+    background-color: #3498db;
+}
+
+.alert-type.disease {
+    background-color: #e74d3c;
+}
+
+.alert-type.default {
+    background-color: #ff9c12;
+}

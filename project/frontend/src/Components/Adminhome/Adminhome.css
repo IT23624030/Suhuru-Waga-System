@@ -1,0 +1,171 @@
+/* Adminhome.css */
+
+/* Fullscreen Background */
+.admin-home-containerro {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  padding-bottom: 40px;
+  overflow: hidden;
+  background: url('./f.webp') no-repeat center center;
+  background-size: cover; /* Fullscreen coverage */
+}
+
+/* Background Image with full coverage */
+.admin-home-containerro::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  
+  z-index: -1;
+  filter: brightness(0.9); /* Optional: Darken for text visibility */
+}
+
+
+/* --- Counts Dashboard --- */
+.counts-dashboardro {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+}
+
+.count-cardro {
+    background: #ffffff;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    min-width: 180px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.count-cardro:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.count-cardro h3 {
+    font-size: 20px;
+    color: #1b5e20;
+    margin-bottom: 10px;
+}
+
+.count-cardro p {
+    font-size: 32px;
+    font-weight: 700;
+    color: #388e3c;
+}
+
+.count-cardro.usersro {
+    border-top: 5px solid #4caf50;
+}
+
+.count-cardro.workersro {
+    border-top: 5px solid #ff9800;
+}
+
+/* --- Existing Admin Grid --- */
+.features-gridsadminro {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    position: relative;
+    z-index: 1;
+}
+
+/* --- Feature Card as Button --- */
+.feature-card-buttonro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    padding: 20px;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #f8f3cb, #dbd7b9);
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.feature-card-buttonro:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+    background: linear-gradient(135deg, #f8f3cb, #f8f3cb);
+}
+
+.feature-icon {
+    width: 140px;
+    height: 140px;
+    margin-bottom: 25px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+}
+
+.cplan-icons { background-image: url('./cplan.webp'); }
+.notices-icons { background-image: url('./board.webp'); }
+.sugge-icons { background-image: url('./tommo.webp'); }
+.market-icons { background-image: url('./today.webp'); }
+.notices1-icons { background-image: url('./forms.png'); }
+.notices2-icons { background-image: url('./al.png'); }
+.notices3-icons { background-image: url('./reso.jpg'); }
+.notices4-icons { background-image: url('./Govportal.png'); }
+
+.card-title {
+    font-size: 1.5rem;
+    margin: 0;
+    text-align: center;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .features-gridsadminro {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-card-buttonro {
+        width: 90%;
+        height: 280px;
+    }
+
+    .feature-icon {
+        width: 120px;
+        height: 120px;
+    }
+
+    .counts-dashboardro {
+        flex-direction: column;
+    }
+
+    .count-cardro {
+        width: 70%;
+        margin-bottom: 20px;
+    }
+}
+
+.error {
+    color: red;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 10px;
+}
