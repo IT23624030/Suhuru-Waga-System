@@ -1,0 +1,58 @@
+/* --- Layout for Features Page Content --- */
+.features-content-layout {
+    display: flex; /* Use flexbox to arrange Navi and the video horizontally */
+    margin-top: 0px; /* Adjust based on the height of your top Nav component */
+    min-height: calc(100vh - 80px); /* Adjust 80px based on top nav height */
+     background: url('./f.webp') no-repeat center center/cover;
+      width: 100%;
+   
+}
+
+/* --- Styling for the Navi (left vertical nav) --- */
+.features-content-layout > .nav-container {
+    flex-shrink: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+   
+    
+}
+
+/* --- Video Container Styling --- */
+.features-video-container {
+    flex-grow: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center video horizontally */
+    justify-content: center; /* Center video vertically */
+    background: transparent; /* Remove white background */
+    margin-left: 20px;
+    border-radius: 8px;
+    box-shadow: none; /* Remove box shadow under video */
+    width: 100%;
+}
+
+.features-main-video {
+    width: 85%;               /* Bigger video */
+    max-width: 1400px;         /* Max size on large screens */
+    height: flex;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: block;
+    align-items: center;      /* Vertically center items */
+    justify-content: center; 
+     /* Horizontally center items */
+}
+
+.features-video-container p {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    color: #555;
+    text-align: center;
+}
+
+/* Adjustments for the top navigation to not overlap the content */
+body {
+    padding-top: 0px; /* Adjust this value based on the actual height of your top Nav component */
+}

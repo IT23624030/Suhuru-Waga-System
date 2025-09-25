@@ -1,0 +1,167 @@
+/* Hero Image Section */
+.forms-hero-image {
+    background-image: url('form.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 300px; /* Adjust height as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin-bottom: 2rem;
+}
+
+.forms-hero-image h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 2px;
+}
+
+/* Forms Component Styles - A modern, clean design */
+.forms-container {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 40px;
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    transition: all 0.3s ease;
+    animation: formsFadeIn 0.8s ease-in-out;
+}
+
+@keyframes formsFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.forms-container h2,
+.forms-container h3 {
+    text-align: center;
+    font-weight: 600;
+    color: #333333;
+}
+
+.forms-upload-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.forms-upload-form .forms-input {
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background: #f5f5f5;
+    color: #555555;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.forms-upload-form .forms-input::placeholder {
+    color: #b0b0b0;
+}
+
+.forms-upload-form .forms-input:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+}
+
+.forms-upload-form .forms-button {
+    padding: 15px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #4CAF50;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.forms-upload-form .forms-button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.forms-message-box {
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 8px;
+    background: rgba(76, 175, 80, 0.1);
+    color: #4CAF50;
+    border: 1px solid rgba(76, 175, 80, 0.3);
+}
+
+.forms-list-section {
+    margin-top: 30px;
+}
+
+.forms-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.forms-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: #f5f5f5;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.forms-item:hover {
+    background: #eef2f5;
+    transform: translateX(5px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.forms-title {
+    font-weight: 500;
+    color: #333333;
+    flex-grow: 1;
+}
+
+.forms-download-btn {
+    padding: 8px 15px;
+    border: 1px solid #4CAF50;
+    border-radius: 20px;
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.forms-download-btn:hover {
+    background-color: #4CAF50;
+    color: #ffffff;
+}
+
+.forms-no-forms {
+    text-align: center;
+    font-style: italic;
+    color: #999;
+}
