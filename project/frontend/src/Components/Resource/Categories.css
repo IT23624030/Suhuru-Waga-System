@@ -1,0 +1,132 @@
+.categories {
+  text-align: center;
+  padding: 60px 20px;
+  background: #f4faf2;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.categories h2 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: #2e5339;
+}
+
+/* Category Cards */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.category-card {
+  background: #eaf8ea;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.category-card h3 {
+  font-size: 1.2rem;
+  color: #2d5039;
+}
+
+.category-card:hover {
+  background-color: #2f7c45;
+  color: #fff;
+  transform: translateY(-5px);
+}
+
+.category-card.active {
+  background-color: #2f7c45;
+  color: #fff;
+}
+
+/* Resources Section */
+.resources-section {
+  margin-top: 3rem;
+}
+
+.resources-section h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #265233;
+}
+
+/* Resource Cards */
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.8rem;
+  padding: 0 10px;
+  margin-top: 1.5rem;
+}
+
+.resource-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.resource-card:hover {
+  transform: translateY(-6px);
+}
+
+.resource-card-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.resource-card h4 {
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+  color: #1e402c;
+}
+
+.resource-card p {
+  font-size: 0.95rem;
+  color: #4e654c;
+  margin-bottom: 12px;
+}
+
+.btn {
+  margin-top: auto;
+  background: #22c55e;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #1a9f4a;
+}
+
+/* Smooth expand/collapse */
+.resources-wrapper {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transform: translateY(-10px);
+  transition: max-height 0.5s ease, opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* Expanded state */
+.resources-wrapper.expanded {
+  max-height: 2000px; /* Large enough to cover any content */
+  opacity: 1;
+  transform: translateY(0);
+}

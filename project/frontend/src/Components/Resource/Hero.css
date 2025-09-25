@@ -1,0 +1,58 @@
+/* ✅ Only applies when body has the class 'agri-hero-page' */
+body.agri-hero-page {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Hero Section */
+body.agri-hero-page .agri-hero-section {
+  position: relative;
+  text-align: center;
+  padding: 120px 20px;
+  color: #f9f9f9;
+  background-image: url('Resource.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body.agri-hero-page .agri-hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+body.agri-hero-page .agri-hero-subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.3);
+}
+
+body.agri-hero-page .agri-hero-cta-btn {
+  background: #22c55e;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.5);
+}
+
+body.agri-hero-page .agri-hero-cta-btn:hover {
+  background-color: #16a34a;
+  box-shadow: 0 6px 20px rgba(22, 163, 74, 0.7);
+}

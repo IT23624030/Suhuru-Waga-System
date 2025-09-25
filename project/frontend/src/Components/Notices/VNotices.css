@@ -1,0 +1,182 @@
+/* Hero Image with Animation */
+.notices-hero-image {
+  background-image: url('Notice.png');
+  background-size: 110%; /* Initial size for zoom effect */
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+  animation: zoom-out 15s ease-out forwards;
+}
+
+@keyframes zoom-out {
+  from {
+    background-size: 110%;
+  }
+  to {
+    background-size: 100%;
+  }
+}
+
+.hero-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  letter-spacing: 2px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.typing-container {
+  min-height: 20px;
+}
+
+.typing-text {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #fff; /* Changed color to white for visibility */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+/* Main Container and Layout */
+.notices-container {
+  font-family: 'Inter', sans-serif;
+  background-color: #ffffff;
+  color: #4b5563;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+/* Intro Section (Now just a title) */
+.intro-section {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+/* Search Bar */
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 600px;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 25px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Notice List with 2-column grid */
+.notice-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .notice-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+.notice-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 24px;
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.notice-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Notice Type Coloring (Curved Container) */
+.notice-type {
+  display: inline-block;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 6px 14px;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.notice-type.financial {
+  background-color: #27ae60;
+}
+.notice-type.training {
+  background-color: #3498db;
+}
+.notice-type.seed {
+  background-color: #f39c12;
+}
+.notice-type.default {
+  background-color: #8e44ad;
+}
+
+.notice-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1f2937;
+  line-height: 1.3;
+  margin: 0 0 12px 0;
+}
+
+.notice-content {
+  font-size: 1rem;
+  color: #4b5563;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.no-notices-message {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #6c757d;
+  grid-column: 1 / -1;
+  margin-top: 4rem;
+}

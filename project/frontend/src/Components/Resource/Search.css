@@ -1,0 +1,128 @@
+.searchbar {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 20px;
+  background: #ffeedd00;
+  justify-content: center;
+  font-family: sans-serif;
+}
+
+.field {
+  position: relative;
+  background: #fff;
+  border-radius: 8px;
+  padding: 10px 14px;
+  width: 180px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+.field:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.field label {
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: 4px;
+  transition: color 0.2s ease;
+}
+.field:hover label {
+  color: #f7c744;
+}
+
+.field span {
+  font-size: 14px;
+  color: #333;
+  transition: color 0.2s ease;
+}
+.field:hover span {
+  color: #000;
+}
+
+.dropdown {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  margin-top: 6px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  padding: 10px;
+  z-index: 10;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.field:hover .dropdown {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.dropdown input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  outline: none;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+.dropdown input:focus {
+  border: 1px solid #f7c744;
+  box-shadow: 0 0 4px rgba(247, 199, 68, 0.6);
+}
+
+.dropdown.guests {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dropdown.guests button {
+  background: #f4f4f4;
+  border: none;
+  font-size: 18px;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+.dropdown.guests button:hover {
+  background: #ddd;
+  transform: scale(1.1);
+}
+.dropdown.guests span {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.search-btn {
+  background: #f7c744;
+  border: none;
+  padding: 14px 22px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.search-btn:hover {
+  background: #f5b900;
+  transform: translateY(-2px);
+}
+.search-btn:active {
+  transform: translateY(0);
+  background: #e0a800;
+}

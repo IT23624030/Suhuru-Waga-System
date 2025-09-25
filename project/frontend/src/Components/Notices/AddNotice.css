@@ -1,0 +1,108 @@
+/* Container for the entire add notice page */
+.add-notice-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ecfcf4;
+    min-height: 100vh;
+}
+
+/* Horizontal Hero Image Section */
+.add-notice-hero {
+    width: 100%;
+    height: 200px; /* Adjust height as needed */
+
+    /* background: url('https://images.unsplash.com/photo-1510519176161-1d54f5c9735d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80') no-repeat center center/cover; */
+    background-color: aquamarine;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.Nhero-overlay {
+    background-color: rgba(0, 0, 0, 0.4); /* Dark overlay for text readability */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Nhero-overlay h1 {
+    color: #fff;
+    font-size: 3em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 40px;
+}
+
+/* Form Container */
+.add-notice-form-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    margin-top: -80px; /* Overlap with the hero section */
+    margin-bottom: 80px;
+    position: relative;
+    width: 90%;
+    max-width: 600px;
+}
+
+.add-notice-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #6a5acd;
+    box-shadow: 0 0 0 3px rgba(106, 90, 205, 0.2);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.submit-button {
+    background-color: #6a5acd;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 12px rgba(106, 90, 205, 0.3);
+}
+
+.submit-button:hover {
+    background-color: #5b4bab;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(106, 90, 205, 0.4);
+}

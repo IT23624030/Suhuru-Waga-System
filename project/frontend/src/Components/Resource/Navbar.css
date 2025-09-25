@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    
+}
+
+/* Container for the entire navbar */
+.navbarr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo and text container on the left */
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+/* Style for the logo image */
+.navbar-logo {
+  height: 50px;
+  margin-right: 15px;
+}
+
+/* Container for the logo text */
+.navbar-logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Primary logo text (e.g., "GeoGoviya") */
+.navbar-logo-primary {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Secondary logo text (e.g., "Department of Agriculture") */
+.navbar-logo-secondary {
+  font-size: 12px;
+  color: #666;
+}
+
+/* Links container in the center */
+.navbar-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Individual link styles */
+.navbar-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 0;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect for links */
+.navbar-links a:hover {
+  color: #5cb85c;
+}
+
+/* Active or current page link style */
+.navbar-links a.active {
+  color: #5cb85c;
+  font-weight: bold;
+}
+
+/* Container for the right side (e.g., dashboard button) */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Dashboard button style */
+.dashboard-button {
+  background-color: #5cb85c;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the dashboard button */
+.dashboard-button:hover {
+  background-color: #4cae4c;
+}

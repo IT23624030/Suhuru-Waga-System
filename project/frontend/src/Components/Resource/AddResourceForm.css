@@ -1,0 +1,238 @@
+/* Base variables for easy theming */
+:root {
+  --primary-color: #2e7d32;
+  --primary-hover: #27672c;
+  --danger-color: #e53935;
+  --danger-hover: #c62828;
+  --bg-light: #f1fdf3;
+  --white: #ffffff;
+  --text-dark: #2c3e50;
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.1);
+  --radius: 16px;
+  --transition: all 0.3s ease;
+  --font-main: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Global styles */
+body.arf-body {
+  background-image: url('../Resource/formBG.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: var(--text-dark);
+  font-family: var(--font-main);
+  margin: 0;
+  padding: 0;
+}
+
+/* Container */
+.arf-form-container {
+  display: flex;
+  max-width: 900px;
+  height: 600px;
+  margin: 2rem auto;
+  background: var(--bg-light);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.arf-form-container:not(.arf-with-image) .arf-form-scrollable {
+  width: 100%;
+}
+
+.arf-form-container.arf-with-image .arf-form-scrollable {
+  width: 50%;
+  transition: width 0.4s ease;
+}
+
+/* Image Preview */
+.arf-image-preview {
+  width: 50%;
+  height: 100%;
+  background: #d8d8d8;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-top-right-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+}
+
+.arf-image-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: arf-fadeSlideIn 2s ease-out forwards;
+}
+
+@keyframes arf-fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scrollable Content */
+.arf-form-scrollable {
+  padding: 2rem;
+  background-color: var(--white);
+  overflow-y: auto;
+  transition: var(--transition);
+}
+
+/* Upload Section */
+.arf-image-upload-section {
+  margin-bottom: 2rem;
+}
+
+.arf-image-upload-label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+  display: block;
+}
+
+.arf-image-upload-box {
+  width: 100%;
+  height: 200px;
+  border: 2px dashed var(--primary-color);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-color);
+  font-weight: 500;
+  cursor: pointer;
+  background: var(--white);
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.arf-image-upload-box:hover {
+  background-color: var(--bg-light);
+  border-color: var(--primary-hover);
+}
+
+.arf-plus-icon {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Action Buttons */
+.arf-image-actions {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.arf-btn,
+.arf-btn-replace,
+.arf-btn-remove,
+.arf-btn-cancel,
+.arf-btn-submit {
+  font-weight: 600;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+  outline: none;
+  box-shadow: none;
+}
+
+.arf-btn,
+.arf-btn-replace {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.arf-btn:hover,
+.arf-btn-replace:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+.arf-btn-remove {
+  background-color: #777;
+  color: var(--white);
+}
+
+.arf-btn-remove:hover {
+  background-color: #555;
+  transform: translateY(-2px);
+}
+
+.arf-btn-cancel {
+  background-color: #777;
+  color: var(--white);
+}
+
+.arf-btn-cancel:hover {
+  background-color: #555;
+  transform: translateY(-2px);
+}
+
+.arf-btn-submit {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.arf-btn-submit:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+/* Form Fields */
+.arf-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.arf-label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.arf-input,
+.arf-textarea,
+.arf-select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.arf-input:focus,
+.arf-textarea:focus,
+.arf-select:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+.arf-input-disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+}
+
+.arf-success-msg {
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.arf-error-msg {
+  color: var(--danger-color);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}

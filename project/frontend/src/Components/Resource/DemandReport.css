@@ -1,0 +1,143 @@
+.page-container {
+  background-color: #f3f4f6;
+  padding: 2rem;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+}
+
+.report-wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.report-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.report-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #1f2937;
+  letter-spacing: -0.025em;
+  margin-bottom: 0.5rem;
+}
+
+.report-subtitle {
+  color: #6b7280;
+  font-size: 1.125rem;
+}
+
+.report-main {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+              0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+}
+
+.loading-indicator {
+  text-align: center;
+  color: #6b7280;
+  font-weight: 600;
+  font-size: 1.125rem;
+  padding: 2rem;
+}
+
+.spinner {
+  width: 2rem;
+  height: 2rem;
+  border: 4px solid #ccc;
+  border-top-color: #6366f1;
+  border-radius: 50%;
+  margin: 0 auto 0.5rem;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.report-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.report-table thead {
+  background-color: #f3f4f6;
+  color: #4b5563;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+}
+
+.report-table th,
+.report-table td {
+  padding: 0.75rem 1.5rem;
+  text-align: left;
+  border-bottom: 1px solid #d1d5db;
+}
+
+.center {
+  text-align: center;
+}
+
+.row-shortage {
+  background-color: #fef2f2;
+}
+
+.row-sufficient {
+  background-color: #f0fdf4;
+}
+
+.status-tag {
+  display: inline-block;
+  border-radius: 9999px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.status-tag.shortage {
+  background-color: #fee2e2;
+  color: #dc2626;
+}
+
+.status-tag.sufficient {
+  background-color: #dcfce7;
+  color: #16a34a;
+}
+
+/* Modern Show Charts Button */
+.chart-toggle-btn {
+  background-color: #16a34a; /* Modern green */
+  background-image: linear-gradient(135deg, #22c55e, #16a34a); /* Gradient for depth */
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.875rem; /* 14px */
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 9999px; /* Full pill shape */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.chart-toggle-btn:hover {
+  background-color: #22c55e;
+  background-image: linear-gradient(135deg, #16a34a, #22c55e);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.chart-toggle-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
