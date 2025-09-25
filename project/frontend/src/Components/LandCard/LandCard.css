@@ -1,0 +1,147 @@
+/* SCOPED STYLES */
+.land-card-wrapper .land-card {
+  background: #16b82e;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transform: translateY(0);
+}
+
+.land-card-wrapper .land-card:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  transform: translateY(-4px);
+}
+
+.land-card-wrapper .land-card-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  background: #51de2a;
+}
+
+.land-card-wrapper .land-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: brightness(1.05) contrast(1.1);
+}
+
+.land-card-wrapper .land-card:hover .land-card-image img {
+  transform: scale(1.08);
+  filter: brightness(1.1) contrast(1.15);
+}
+
+.land-card-wrapper .land-card-content {
+  padding: 20px;
+  background: #e6ffe2;
+}
+
+.land-card-wrapper .land-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.land-card-wrapper .land-owner {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.land-card-wrapper .land-amount {
+  font-size: 20px;
+  font-weight: 700;
+  color: #4caf50;
+  margin: 0;
+}
+
+/* Button Sections */
+.land-card-wrapper .land-card-actions,
+.land-card-wrapper .land-card-admin-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.land-card-wrapper .btn {
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+/* Primary buttons */
+.land-card-wrapper .btn-primary {
+  background: #4caf50 !important; /* Green */
+  color: white !important;
+  border-color: #4caf50 !important;
+}
+
+.land-card-wrapper .btn-primary:hover {
+  background: #45a049 !important;
+  border-color: #45a049 !important;
+}
+
+/* Secondary buttons */
+.land-card-wrapper .btn-secondary {
+  background: #ffeab9 !important; /* Orange */
+  color: rgb(251, 163, 40) !important;
+  border-color: #ff9800 !important;
+}
+
+.land-card-wrapper .btn-secondary:hover {
+  background: #f57c00 !important;
+  border-color: #f57c00 !important;
+}
+
+/* Edit button */
+.land-card-wrapper .btn-edit {
+  background: #ccf4ff !important; /* White background */
+  color: #2196f3 !important; /* Blue text */
+  border: 2px solid #2196f3 !important;
+}
+
+.land-card-wrapper .btn-edit:hover {
+  background: #2196f3 !important;
+  color: white !important;
+}
+
+/* Delete button */
+.land-card-wrapper .btn-delete {
+  background: #ffc8c8 !important; /* Red */
+  color: rgb(255, 56, 56) !important;
+  border-color: #f44336 !important;
+}
+
+.land-card-wrapper .btn-delete:hover {
+  background: #d32f2f !important;
+  border-color: #d32f2f !important;
+}
+
+/* Hover effects */
+.land-card-wrapper .btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .land-card-wrapper .land-card-actions,
+  .land-card-wrapper .land-card-admin-actions {
+    grid-template-columns: 1fr;
+  }
+}

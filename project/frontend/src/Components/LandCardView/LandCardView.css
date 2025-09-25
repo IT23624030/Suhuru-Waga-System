@@ -1,0 +1,380 @@
+.land-card {
+  background: #16b82e;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transform: translateY(0);
+}
+
+.land-card:hover {
+  box-shadow: 0 8px 30px rgba(59, 188, 19, 0.12);
+  transform: translateY(-4px);
+}
+
+.land-card-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  background: #ceffa4;
+}
+
+.land-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: brightness(1.05) contrast(1.1);
+}
+
+.land-card:hover .land-card-image img {
+  transform: scale(1.08);
+  filter: brightness(1.1) contrast(1.15);
+}
+
+.land-card-overlay {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 2;
+}
+
+.land-card-content {
+  padding: 20px;
+  background: #e1ffdd;
+}
+
+.land-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.land-owner {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.land-amount {
+  font-size: 20px;
+  font-weight: 700;
+  color: #4caf50;
+  margin: 0;
+  letter-spacing: -0.3px;
+}
+
+.land-details {
+  margin-bottom: 16px;
+}
+
+.land-detail {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  padding: 0;
+}
+
+.detail-icon {
+  font-size: 16px;
+  width: 20px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.detail-text {
+  color: #666666;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.land-resources {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.resources-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.resource-chip-game {
+  background: #f5f5f5;
+  color: #666666;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  border: 1px solid #e0e0e0;
+}
+
+.resource-chip-game:hover {
+  background: #d9eeda;
+  color: white;
+}
+
+.land-description {
+  margin-bottom: 16px;
+  color: #999999;
+  font-size: 14px;
+  line-height: 1.4;
+  font-style: italic;
+}
+
+.land-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.stat {
+  text-align: center;
+  padding: 0;
+}
+
+.stat-label {
+  display: block;
+  font-size: 12px;
+  color: #999999;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.stat-value {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.land-card-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.land-card-admin-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.land-card-actions .btn,
+.land-card-admin-actions .btn {
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+/* Primary action buttons */
+.land-card-actions .btn-primary {
+  background: #4caf50;
+  color: white;
+  border-color: #4caf50;
+}
+
+.land-card-actions .btn-primary:hover {
+  background: #45a049;
+  border-color: #45a049;
+}
+
+.land-card-actions .btn-secondary {
+  background: #ffe6c0;
+  color: rgb(241, 159, 17);
+  border-color: #ff9800;
+}
+
+.land-card-actions .btn-secondary:hover {
+  background: #f57c00;
+  border-color: #f57c00;
+}
+
+.land-card-actions .btn:hover,
+.land-card-admin-actions .btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-edit {
+  background: #2196f3;
+  color: white;
+  border-color: #2196f3;
+}
+
+.btn-edit:hover:not(:disabled) {
+  background: #1976d2;
+  border-color: #1976d2;
+  color: white;
+}
+
+.btn-delete {
+  background: #f44336;
+  color: white;
+  border-color: #f44336;
+}
+
+.btn-delete:hover:not(:disabled) {
+  background: #d32f2f;
+  border-color: #d32f2f;
+  color: white;
+}
+
+/* Status badges */
+.status-badge {
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.2s ease;
+}
+
+.status-badge:hover {
+  transform: scale(1.02);
+}
+
+.status-active {
+  background: #4caf50;
+  color: white;
+}
+
+.status-closed {
+  background: #f44336;
+  color: white;
+}
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .land-card-image {
+    height: 200px;
+  }
+  
+  .land-card-content {
+    padding: 1.5rem;
+  }
+  
+  .land-owner {
+    font-size: 1.2rem;
+  }
+  
+  .land-amount {
+    font-size: 1.4rem;
+  }
+  
+  .land-card-actions {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+  
+  .land-stats {
+    padding: 1rem;
+  }
+  
+  .stat {
+    padding: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .land-card {
+    margin: 0 0.5rem;
+  }
+  
+  .land-card-image {
+    height: 180px;
+  }
+  
+  .land-card-content {
+    padding: 1.25rem;
+  }
+  
+  .land-card-header {
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: center;
+    padding-bottom: 0.75rem;
+  }
+  
+  .land-card-header::after {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+  }
+  
+  .land-owner {
+    font-size: 1.1rem;
+  }
+  
+  .land-amount {
+    font-size: 1.3rem;
+  }
+  
+  .land-card-actions {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  
+  .land-card-admin-actions {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  
+  .land-stats {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    padding: 1rem;
+  }
+  
+  .resources-list {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .resource-chip-game {
+    text-align: center;
+  }
+  
+  .land-detail {
+    padding: 0.75rem;
+    border-radius: 12px;
+  }
+  
+  .detail-icon {
+    width: 28px;
+    height: 28px;
+    font-size: 1.1rem;
+  }
+  
+  .land-description {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+}
