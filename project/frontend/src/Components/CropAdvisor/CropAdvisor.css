@@ -1,0 +1,320 @@
+/* --- Wrapper --- */
+.cropadvisor-wrappercrops {
+  max-width:  auto;
+  margin:  auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  height: auto;       /* Box height adjusts to content */
+  min-height: 0px;  /* Optional: ensures at least some height */
+  border: 3px solid #0fad4e; /* Light green border */
+}
+
+
+
+/* Title */
+.cropadvisor-wrappercrops h2 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+/* --- Form Sections --- */
+.form-section {
+  margin-bottom: 25px;
+  
+}
+
+.form-section label {
+  font-size: 16px;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.form-section select,
+.form-section button {
+  width: 100%;
+  padding: 12px;
+  font-size: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: 0.3s;
+}
+
+/* Buttons */
+button {
+  background: #4caf50;
+  color: white;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #388e3c;
+}
+
+/* --- Crop Cards --- */
+.crop-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 15px;
+  background: #fafafa;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s;
+  
+}
+
+.crop-card:hover {
+  transform: translateY(-3px);
+  background: #dcedc8; /* Slightly darker green on hover */
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* --- Plan Card --- */
+/* Plan Card */
+.plan-card {
+  background: #e8f5e9;
+  border: 1px solid #4caf50;
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  
+}
+
+.plan-card h4 {
+  margin-bottom: 10px;
+  color: #2e7d32;
+  font-weight: 700;
+  text-align: center;
+}
+/* Save and Download PDF buttons styling */
+.plan-card .btn-save,
+.plan-card .btn-download {
+  width: 160px;               /* Same as Search button */
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, #4caf50, #81c784); /* Gradient like Search button */
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  display: block;
+  margin: 10px auto 0 auto;   /* Center and add spacing */
+}
+
+.plan-card .btn-save:hover,
+.plan-card .btn-download:hover {
+  background: linear-gradient(135deg, #388e3c, #66bb6a);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.plan-card .btn-save:active,
+.plan-card .btn-download:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* --- Messages --- */
+.error {
+  color: #d32f2f;
+  font-weight: 600;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.success {
+  color: #2e7d32;
+  font-weight: 600;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .cropadvisor-wrapper {
+    padding: 20px;
+    margin: 20px;
+  }
+
+  .cropadvisor-wrapper h2 {
+    font-size: 24px;
+  }
+}
+
+/* Form Box */
+.form-box {
+  background: #f1f8e9;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  margin-top: 15px;
+  
+}
+
+.form-box label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 5px;
+  color: #2c3e50;
+}
+
+.form-box select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 15px;
+  transition: 0.3s;
+  
+}
+
+.form-box select:focus {
+  border-color: #4caf50;
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
+}
+
+
+
+/* Available Crops for District section */
+.crop-sectionro {
+  border: 3px solid #0fad4e;     /* Same green border as Select District */
+  border-radius: 12px;            /* Rounded corners */
+  padding: 20px;                  /* Inner spacing */
+  margin-bottom: 2px;            /* Space below section */
+  background: #f9fff9;            /* Light background */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+}
+
+.crop-sectionro .crop-card {
+  margin-top: 12px; /* small space between cards */
+}
+
+/* Get the Plan section */
+.plan-sectionro {
+  border: 3px solid #0fad4e;
+  border-radius: 12px;
+  padding: 20px;
+  background: #f9fff9;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+  /* New properties for maximum width and center alignment */
+  max-width: 600px;       /* Limits the width to 600px */
+  margin: 0 auto;         /* Centers it horizontally */
+  width: 100%; 
+}
+
+/* Get Plan button styling (like Search button) */
+.plan-sectionro .btn-primary {
+  width: 160px;               /* Same width as Search button */
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, #4caf50, #81c784); /* Gradient like Search button */
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  display: block;
+  margin: 0 auto;             /* Center the button */
+}
+
+.plan-sectionro .btn-primary:hover {
+  background: linear-gradient(135deg, #388e3c, #66bb6a);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.plan-sectionro .btn-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* --- Select District section --- */
+/* --- Select District section --- */
+.search-boxro {
+  border: 3px solid #0fad4e;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background: #f9fff9;
+
+  display: flex;
+  flex-direction: column;   /* Arrange children vertically */
+  align-items: center;      /* Center horizontally */
+  gap: 15px;                /* Space between label, dropdown, and button */
+}
+
+/* Label styling */
+.search-boxro label {
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+  display: block;
+  text-align: center;       /* Center label text */
+}
+
+/* Dropdown styling */
+.search-boxro select {
+  font-size: 18px;
+  color: gray;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  width: 100%;             /* Optional: stretch to full container width */
+  max-width: 300px;        /* Optional: limit max width */
+  transition: 0.3s;
+}
+
+.search-boxro select:focus {
+  border-color: #4caf50;
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
+  color: black;
+}
+
+/* Center the Search button */
+.search-boxro button {
+  width: 160px;               /* Slightly wider */
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, #4caf50, #81c784); /* Gradient for a modern look */
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.search-boxro button:hover {
+  background: linear-gradient(135deg, #388e3c, #66bb6a);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.search-boxro button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

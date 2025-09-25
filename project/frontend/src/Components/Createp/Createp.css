@@ -1,0 +1,149 @@
+/* ----- New Features Section Styling ----- */
+.features-section {
+    padding: 60px 20px; /* Using original padding */
+    background-color: #f8f9fa;
+    text-align: center;
+    background-image: url('./f.webp');
+    
+}
+
+
+
+.features-header {
+    margin-bottom: 50px; /* Using original margin */
+}
+
+.features-subtitle {
+    font-size: 0.9rem;
+    color: #2e8b57;
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+.features-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin: 10px 0 10px;
+}
+
+.features-description {
+    font-size: 1rem;
+    color: #666;
+    margin: 0;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* now 4 cards in one row */
+    gap: 30px;
+    max-width: 1400px; /* widened to fit 4 comfortably */
+    margin: 0 auto;
+}
+
+
+.feature-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.land-icon{
+background-image: url('./8.jpg');
+}
+
+.plan-icon{
+background-image: url('./2.webp');
+}
+
+.buyer-icon{
+background-image: url('./4.webp');
+}
+
+.reso-icon{
+background-image: url('./5.webp');
+}
+
+.noti-icon{
+background-image: url('./6.webp');
+}
+
+.card-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #333;
+    margin: 0 0 5px;
+}
+
+.card-subtitle {
+    font-size: 0.9rem;
+    color: #2e8b57;
+    font-weight: 600;
+    margin: 0 0 15px;
+}
+
+.card-text {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 992px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Stylish Register Button */
+.card-button {
+  background: linear-gradient(135deg, #4CAF50, #2e8b57);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 15px rgba(46, 139, 87, 0.3);
+}
+
+.card-button:hover {
+  background: linear-gradient(135deg, #2e8b57, #4CAF50);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 20px rgba(46, 139, 87, 0.4);
+}
+
+.card-button:active {
+  transform: scale(0.98);
+  box-shadow: 0 3px 10px rgba(46, 139, 87, 0.3);
+}
+
+.card-button-link {
+  text-decoration: none;
+}

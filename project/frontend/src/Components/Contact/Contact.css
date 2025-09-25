@@ -1,0 +1,190 @@
+/* General Body and Page Wrapper for background */
+.contact-page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  justify-content: flex-start; /* Push content to top, but leave space for nav */
+  background: url('f.webp') no-repeat center center fixed; /* Placeholder for a beautiful farm background */
+  background-size: cover;
+  padding-top: 80px; /* Adjust based on your DulaNav height */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+/* Contact Container Styling */
+.contact-container {
+  background: rgba(255, 255, 255, 0.95); /* Slightly transparent white for a clean look */
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15); /* More pronounced shadow */
+  width: clamp(300px, 90%, 600px); /* Responsive width */
+  margin: 40px auto; /* Centered with some top/bottom margin */
+  animation: fadeIn 1s ease-out; /* Main container fade-in */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Header and Text Styling */
+.contact-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.contact-container h2 {
+  font-size: 2.5em; /* Larger heading */
+  margin-bottom: 10px;
+  color: #2e7d32; /* A strong green for agriculture */
+  letter-spacing: 1px;
+}
+
+.contact-header p {
+  font-size: 1.1em;
+  color: #555;
+  line-height: 1.6;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Form Styling */
+.contact-form-grid {
+  display: grid;
+  gap: 20px; /* Space between inputs */
+}
+
+.contact-container input,
+.contact-container textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #c8e6c9; /* Softer border color */
+  border-radius: 8px;
+  font-size: 1em;
+  transition: all 0.3s ease-in-out; /* Smooth transition for focus */
+  background-color: #f7fff7; /* Slightly off-white input background */
+}
+
+.contact-container input:focus,
+.contact-container textarea:focus {
+  border-color: #4caf50; /* Green border on focus */
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.3); /* Soft green glow */
+  outline: none; /* Remove default outline */
+  transform: translateY(-2px); /* Subtle lift effect */
+}
+
+/* Button Styling */
+.contact-container button {
+  width: 100%;
+  padding: 15px;
+  background: #66bb6a; /* A vibrant green */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1em;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.contact-container button:hover {
+  background: #4caf50; /* Darker green on hover */
+  transform: translateY(-3px) scale(1.01); /* Lift and slightly enlarge */
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.contact-container button:active {
+  transform: translateY(0); /* Press effect */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Message Styling with Animation */
+.message {
+  margin-top: 25px;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+  opacity: 0; /* Hidden by default */
+  max-height: 0; /* Hidden by default */
+  overflow: hidden;
+  transition: opacity 0.5s ease-out, max-height 0.5s ease-out, padding 0.5s ease-out;
+}
+
+.message.show {
+  opacity: 1; /* Fade in */
+  max-height: 100px; /* Animate height */
+  padding: 12px;
+}
+
+.success {
+  background-color: #e8f5e9; /* Light green background */
+  color: #2e7d32; /* Dark green text */
+  border: 1px solid #a5d6a7;
+}
+
+.error {
+  background-color: #ffebee; /* Light red background */
+  color: #c62828; /* Dark red text */
+  border: 1px solid #ef9a9a;
+}
+
+/* Additional Contact Info (Optional) */
+.additional-contact-info {
+    margin-top: 40px;
+    padding-top: 25px;
+    border-top: 1px solid #eee;
+    text-align: center;
+    color: #666;
+}
+
+.additional-contact-info h3 {
+    color: #4caf50;
+    margin-bottom: 15px;
+    font-size: 1.8em;
+}
+
+.additional-contact-info p {
+    margin-bottom: 8px;
+    font-size: 1em;
+}
+
+.additional-contact-info a {
+    color: #66bb6a;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.additional-contact-info a:hover {
+    color: #4caf50;
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 30px;
+    margin: 30px auto;
+  }
+  .contact-container h2 {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-container {
+    padding: 20px;
+  }
+  .contact-container h2 {
+    font-size: 1.8em;
+  }
+  .contact-header p {
+    font-size: 0.9em;
+  }
+  .contact-container button {
+    font-size: 1em;
+  }
+}

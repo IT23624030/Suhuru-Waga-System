@@ -1,0 +1,257 @@
+/* ---------- Container ---------- */
+.crop-container {
+    /* To apply a background to the entire page,
+       you can set these properties on a full-screen container. */
+    width: 100%;
+    min-height: 100vh;
+    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+ 
+    /* New Background Properties for full-screen */
+    background-image: url('./f.webp'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Keeps the background fixed when scrolling */
+}
+
+/* To keep the content centered on the background */
+.crop-container > h1,
+.crop-container > hr,
+.crop-container > h2,
+.crop-container > table {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+     
+}
+
+/* ---------- Title ---------- */
+.crop-container h1 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #2c3e50;
+}
+
+/* ---------- Form ---------- */
+.crop-form {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px; /* Reduced padding for a smaller form */
+    border-radius: 12px; /* Slightly smaller border radius */
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08); /* Adjusted shadow for a cleaner look */
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Reduced gap between form elements */
+    max-width: 500px; /* Reduced max-width for a more compact form */
+    margin: 0 auto 30px auto; /* Reduced bottom margin */
+    transition: transform 0.3s ease;
+}
+
+.crop-form:hover {
+    transform: translateY(-3px);
+}
+
+/* ---------- Form Title ---------- */
+.crop-form h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #34495e;
+    text-align: center;
+}
+
+/* ---------- Inputs ---------- */
+.crop-form input {
+    padding: 12px 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.crop-form input:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
+}
+
+/* ---------- Button ---------- */
+.crop-form button {
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.crop-form button:hover {
+    background-color: #45a049;
+    transform: scale(1.02);
+}
+
+/* ---------- Table ---------- */
+.crop-table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-radius: 12px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent background for readability */
+}
+
+.crop-table th,
+.crop-table td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.crop-table thead {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: 600;
+}
+
+.crop-table tbody tr {
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s ease;
+}
+
+.crop-table tbody tr:hover {
+    background-color: #f1f9f1;
+}
+
+/* ---------- Action Buttons ---------- */
+.crop-table button {
+     padding: 6px 12px;
+    margin-right: 5px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    min-width: 80px; /* Ensures same width for both buttons */
+    height: 35px;    /* Ensures same height for both buttons */
+    text-align: center;
+}
+
+.crop-table button:hover {
+    opacity: 0.9;
+}
+
+.crop-table button:first-child {
+    background-color: #e2ea0b;
+    color: white;
+}
+
+.crop-table button:last-child {
+    background-color: #e74c3c;
+    color: white;
+}
+
+/* ---------- Responsive ---------- */
+@media screen and (max-width: 768px) {
+    .crop-form {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .crop-table th, .crop-table td {
+        padding: 10px;
+    }
+}
+
+/* Hero Image and Text */
+.crop-hero-image {
+    background: url('./m.jpg') no-repeat center center/cover; /* Replace with your image */
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    position: relative;
+    width: 100%;
+   
+}
+
+.crop-hero-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Dark overlay */
+    z-index: 0;
+}
+
+.hero-text-container {
+    text-align: center;
+    padding: 20px;
+    z-index: 1;
+}
+
+.hero-title {
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.hero-subtitle {
+    font-size: 1.3em;
+    font-weight: 400;
+}
+
+/* Text Container inside Hero Image */
+.crop-text-container {
+    text-align: center;
+    padding: 20px;
+    z-index: 1;
+    color: white; /* Ensures all text is white */
+}
+
+/* Title inside Hero */
+.crop-titleros {
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: white; /* Title color changed to white */
+}
+
+/* Subtitle inside Hero */
+.crop-subtitle {
+    font-size: 1.3em;
+    font-weight: 400;
+    color: white; /* Subtitle color changed to white */
+}
+.crop-text-container {
+    position: relative;
+    z-index: 2; /* Ensures text stays above overlay */
+    text-align: center;
+    color: white;
+}
+
+/* ---------- Hero Title ---------- */
+.crop-titleros {
+    font-size: 30px;       /* Increased from 3em to 4em */
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #ffffff;       /* Ensures text is white */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8); /* Optional: stronger shadow for better contrast */
+}
+
+/* ---------- Hero Subtitle ---------- */
+.crop-subtitle {
+    font-size: 1.8em;     /* Increased from 1.3em to 1.8em */
+    font-weight: 400;
+    color: #ffffff;       /* Ensures text is white */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8); /* Optional: stronger shadow for better contrast */
+}
+

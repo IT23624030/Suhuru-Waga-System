@@ -1,0 +1,223 @@
+/* === General Container === */
+.plan-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    /* --- New Background Properties --- */
+    background-image: url('./f.webp'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Keeps the background fixed when scrolling */
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Title Section */
+.plan-side {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.plan-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #2c3e50;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+/* === Form Section === */
+.plan-form-container {
+    background: rgba(255, 255, 255, 0.9); /* Use a semi-transparent white for readability */
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 40px;
+}
+
+.plan-form h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #4CAF50;
+    text-align: center; /* Center the heading horizontally */
+}
+
+
+.plan-form p {
+    margin-bottom: 20px;
+    color: #666;
+    font-size: 15px;
+}
+
+/* Input + Textarea Styling */
+.plan-form input,
+.plan-form textarea {
+    width: 100%;
+    padding: 14px 16px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.plan-form input:focus,
+.plan-form textarea:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 6px rgba(76, 175, 80, 0.3);
+    outline: none;
+}
+
+/* Submit Button */
+/* Center the Save button */
+.plan-btn {
+    background: linear-gradient(135deg, #4CAF50, #2e8b57);
+    color: #fff;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: block;         /* Make it a block-level element */
+    margin: 20px auto 0;    /* Auto margins center it horizontally */
+    text-align: center;     /* Ensures text stays centered */
+}
+
+.plan-btn:hover {
+    background: linear-gradient(135deg, #45a049, #256d45);
+    transform: translateY(-2px);
+}
+
+
+/* === Table Section === */
+.plan-form-container h2 {
+    margin-top: 30px;
+    font-size: 22px;
+    color: #2c3e50;
+}
+
+.plan-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 15px;
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent background for readability */
+}
+
+.plan-table th,
+.plan-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.plan-table th {
+    background: #4CAF50;
+    color: white;
+    font-weight: 600;
+}
+
+.plan-table tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+.plan-table tr:hover {
+    background: #f1f1f1;
+}
+
+/* Action Buttons */
+/* Action Buttons - Updated for same size */
+.table-btn {
+    width: 80px; /* Fixed width for all buttons */
+    text-align: center; /* Center text inside button */
+    background: #e2ea0b;
+    color: white;
+    padding: 8px 0; /* vertical padding only */
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-right: 6px;
+    transition: all 0.3s ease;
+}
+
+.table-btn:hover {
+    background: #9ba005;
+}
+
+.table-btn.delete {
+    background: #f44336;
+}
+
+.table-btn.delete:hover {
+    background: #d32f2f;
+}
+
+
+/* === Responsive === */
+@media (max-width: 768px) {
+    .plan-form-container {
+        padding: 20px;
+    }
+
+    .plan-title {
+        font-size: 26px;
+    }
+
+    .plan-form h2 {
+        font-size: 20px;
+    }
+
+    .plan-btn {
+        width: 100%;
+    }
+}
+
+/* Hero Image and Text */
+.plan-hero-image {
+    background: url('./sa.jpg') no-repeat center center/cover; /* Replace with your image */
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    position: relative;
+    width: 100%;
+   
+}
+
+.plan-hero-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Dark overlay */
+    z-index: 0;
+}
+
+.hero-text-container {
+    text-align: center;
+    padding: 20px;
+    z-index: 1;
+}
+
+.hero-title {
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.hero-subtitle {
+    font-size: 1.3em;
+    font-weight: 400;
+}

@@ -1,0 +1,216 @@
+/* --- Parent container for the chart + calculator --- */
+.calculator-content-layout {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align items to top */
+  gap: 40px;
+  padding: 40px;
+  width: 100%;
+  min-height: calc(100vh - 200px);
+  box-sizing: border-box;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+/* --- Market Chart Container --- */
+.market-chart-container {
+  flex: 1;
+  max-width: 600px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 450px;
+  width: 100%;
+}
+
+.market-chart-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.2);
+}
+
+.market-chart-container h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #333;
+  text-align: center;
+}
+
+/* --- Calculator Container --- */
+.features-main-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.calculator-card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.calculator-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.2);
+}
+
+.calculator-card h2 {
+  font-size: 28px;
+  margin-bottom: 25px;
+  color: #333;
+  font-weight: 700;
+}
+
+/* --- Form Group --- */
+.form-groupro {
+  width: 100%;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-groupro label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  display: block;
+  color: #555;
+  font-size: 16px;
+}
+
+/* --- Vegetable Dropdown Styling --- */
+/* Target the select element inside the form group */
+.form-groupro select {
+  width: 100%; /* Make it span the full width of its container */
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  appearance: none; /* Removes default dropdown arrow */
+  background-color: #fff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 20px;
+  cursor: pointer;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-groupro select:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+  outline: none;
+}
+
+/* Input group */
+.input-groupro {
+  display: flex;
+  gap: 10px;
+}
+
+.input-groupro input,
+.input-groupro select {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-groupro input:focus,
+.input-groupro select:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+  outline: none;
+}
+
+/* Button */
+.calculator-card button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 20px;
+   margin-bottom: 55px;
+  background: linear-gradient(135deg, #4CAF50, #45a049);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.calculator-card button:hover:not(:disabled) {
+  background: linear-gradient(135deg, #45a049, #388e3c);
+  transform: translateY(-2px);
+}
+
+.calculator-card button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* Result Container */
+.result-container {
+  margin-top: 20px;
+  padding: 15px 20px;
+  background-color: #f1f8e9;
+  border-radius: 10px;
+  border: 1px solid #dcedc8;
+  text-align: left;
+  font-weight: 500;
+}
+
+.result-container h3 {
+  margin-top: 0;
+  color: #33691e;
+  font-size: 18px;
+}
+
+/* Error message */
+.error-message {
+  color: red;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* Chart Styling */
+.recharts-vertical-bar .recharts-bar-rectangle {
+  rx: 6;
+  ry: 6;
+}
+
+.recharts-tooltip-wrapper {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.recharts-legend-wrapper {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* --- Responsive for smaller screens --- */
+@media (max-width: 900px) {
+  .calculator-content-layout {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    min-height: auto;
+    padding: 20px;
+  }
+
+  .market-chart-container,
+  .calculator-card {
+    max-width: 100%;
+    margin: 0;
+  }
+}
