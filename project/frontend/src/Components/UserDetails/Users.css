@@ -1,0 +1,406 @@
+/* === Body & Container === */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f9f9f9, #eef7ee);
+}
+
+/* Users container */
+.users-page-container-rosh {
+  width: 100%;
+  min-height: 100vh;
+  background: url('./f.webp') no-repeat center center fixed;
+  background-size: cover; /* Ensures full coverage */
+  background-position: center;
+  background-attachment: fixed;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Title */
+.users-page-container-rosh h1 {
+  text-align: center;
+  font-size: 34px;
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: #095f24;
+}
+
+/* Profile Card */
+.users-page-profile-rosh {
+  background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  margin: 0 auto 30px;
+  max-width: 900px;
+}
+
+/* Subheading */
+.users-page-profile-rosh h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #4CAF50;
+}
+
+/* === Tables === */
+.users-page-user-table-rosh,
+.users-page-plans-table-rosh {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 25px;
+  font-size: 15px;
+}
+
+.users-page-user-table-rosh td,
+.users-page-plans-table-rosh th,
+.users-page-plans-table-rosh td {
+  border: 1px solid #ddd;
+  padding: 12px;
+}
+
+.users-page-user-table-rosh td:first-child {
+  font-weight: 600;
+  background: #f4f6f8;
+  width: 30%;
+}
+
+/* Table Head */
+.users-page-plans-table-rosh th {
+  background: #4CAF50;
+  color: white;
+  font-weight: 600;
+  text-align: left;
+}
+
+/* Alternate row coloring */
+.users-page-plans-table-rosh tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+/* Hover effect */
+.users-page-plans-table-rosh tr:hover {
+  background: #efeedd;
+}
+
+/* === Inputs === */
+.users-page-user-table-rosh input {
+  width: 95%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+.users-page-user-table-rosh input:focus {
+  border-color: #4CAF50;
+  outline: none;
+  box-shadow: 0 0 6px rgba(76, 175, 80, 0.3);
+}
+
+/* === Buttons === */
+.users-page-btn-rosh {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: all 0.3s;
+}
+
+.users-page-btn-rosh:hover {
+  transform: translateY(-2px);
+  background: #a31316;
+}
+
+.users-page-btn-green-rosh {
+  background: #4CAF50;
+  color: white;
+}
+
+.users-page-btn-green-rosh:hover {
+  background: #388e3c;
+}
+
+.users-page-btn-blue-rosh {
+  background: #2196f3;
+  color: white;
+}
+
+.users-page-btn-blue-rosh:hover {
+  background: #1976d2;
+}
+
+.users-page-btn-red-rosh {
+  background: #f44336;
+  color: white;
+}
+
+.users-page-btn-red-rosh:hover {
+  background: #d32f2f;
+}
+
+/* Action buttons below profile */
+.users-page-action-buttons-rosh {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.users-page-action-buttons-rosh .users-page-btn-rosh {
+  padding: 12px 25px;
+  font-size: 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* === Saved Plans Container === */
+.users-page-saveplan-rosh {
+  max-width: 900px;
+  margin: 0 auto 40px;
+}
+
+/* === CropAdvisor Wrapper (centered) === */
+.users-page-cropadvisor-wrapper-rosh { 
+  padding: 80px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 0 auto;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  max-width: 1200px;
+  width: 90%;
+  min-height: 80%;
+}
+
+/* Title */
+.users-page-title-rosh {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #2c3e50;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+/* Search box */
+.users-page-search-box-rosh {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.users-page-search-box-rosh label {
+  font-weight: 600;
+  font-size: 18px;
+  margin-right: 15px;
+}
+
+.users-page-search-box-rosh select,
+.users-page-search-box-rosh button {
+  font-size: 18px;
+  padding: 12px 25px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.users-page-search-box-rosh button {
+  margin-left: 15px;
+  background: #4CAF50;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.users-page-search-box-rosh button:hover {
+  background: #388e3c;
+}
+
+/* Layout for crops + plan */
+.users-page-crop-plan-layout-rosh {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+/* Left side - crops */
+.users-page-crop-section-rosh {
+  flex: 1;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+}
+
+.users-page-crop-card-rosh {
+  background: #fdfdfd;
+  border: 1px solid #ddd;
+  padding: 18px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+  font-size: 16px;
+}
+
+/* Right side - plan */
+.users-page-plan-section-rosh {
+  flex: 1;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+}
+
+.users-page-form-box-rosh {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.users-page-form-box-rosh label {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.users-page-form-box-rosh select,
+.users-page-form-box-rosh button {
+  font-size: 16px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Buttons */
+.users-page-btn-primary-rosh {
+  background: #4CAF50;
+  color: white;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 16px;
+  padding: 12px 20px;
+  border-radius: 8px;
+}
+
+.users-page-btn-primary-rosh:hover {
+  background: #388e3c;
+}
+
+.users-page-btn-save-rosh {
+  background: #4CAF50;
+  color: white;
+  font-weight: 600;
+  border: none;
+  padding: 12px 25px;
+  margin: 20px auto 0;
+  display: block; 
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.users-page-btn-save-rosh:hover {
+  background: #388e3c; 
+}
+
+/* Plan card */
+.users-page-plan-card-rosh {
+  background: #e8f5e9;
+  border: 1px solid #4CAF50;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+  font-size: 16px;
+}
+
+/* Messages */
+.users-page-error-rosh {
+  color: red;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.users-page-success-rosh {
+  color: green;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+/* Download button */
+.users-page-btn-download-rosh {
+  background: #4CAF50;
+  color: white;
+  font-weight: 600;
+  border: none;
+  padding: 12px 25px;
+  margin: 20px auto 0;
+  display: block;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.users-page-btn-download-rosh:hover {
+  background: #388e3c;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .users-page-crop-plan-layout-rosh {
+    flex-direction: column;
+  }
+
+  .users-page-cropadvisor-wrapper-rosh {
+    padding: 40px;
+    min-height: auto;
+  }
+
+  .users-page-search-box-rosh label,
+  .users-page-search-box-rosh select,
+  .users-page-search-box-rosh button {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .users-page-btn-save-rosh,
+  .users-page-btn-primary-rosh,
+  .users-page-btn-download-rosh {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .users-page-container-rosh {
+    padding: 20px;
+  }
+
+  .users-page-profile-rosh {
+    padding: 20px;
+  }
+
+  .users-page-container-rosh h1 {
+    font-size: 26px;
+  }
+
+  .users-page-btn-rosh {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
