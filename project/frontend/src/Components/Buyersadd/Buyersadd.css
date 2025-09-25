@@ -1,0 +1,109 @@
+/* Full page background image */
+.bypage-container {
+  display: flex;
+  min-height: calc(100vh - 100px);
+  background-image: url("./bg-buyers3.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Form container */
+.bform-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px;
+  margin-left: 650px;
+}
+
+/* Form Styling */
+.bbuyer-form {
+  background: white;
+  padding: 20px 20px;       /* form padding */
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Form Heading */
+.bbuyer-form h1 {
+  text-align: center;
+  color: #000000;
+  margin-bottom: 25px;      /* space below heading */
+  font-size: 26px;
+  font-weight: bold;
+}
+
+/* Labels */
+.bbuyer-form label {
+  display: block;
+       /* small gap between label and input */
+  color: black;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 0;
+}
+
+/* Inputs */
+.bbuyer-form input[type="text"],
+.bbuyer-form input[type="email"],
+.bbuyer-form input[type="number"] {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 0px;      /* gap between input fields */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  color: black;
+  font-weight: 500;
+  background-color: #f7f7f7;
+  transition: border 0.3s, background 0.3s;
+  margin-top:0;
+
+.bbuyer-form input:focus {
+  border-color: #19801523;
+  background-color: #6dff502c;
+  outline: none;
+}
+}
+
+/* Checkbox */
+.bcheckbox-label {
+  display: inline-flex;
+  align-items: center;
+  font-size: 14px;
+  color: black;
+  font-weight: bold;
+  gap: 8px;                  /* space between checkbox and text */
+  cursor: pointer;
+  margin-bottom: 15px;        /* spacing below checkbox */
+}
+
+.bcheckbox-label input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+}
+
+/* Submit Button */
+.bbtn-submit {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(to right, #083a0a, #1bec26);
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;            /* small space above button */
+}
+
+.bbtn-submit:hover {
+  background-color: #16a34a;
+  transform: scale(1.03);
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.25);
+}

@@ -1,0 +1,61 @@
+/* Container */
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  background-color: #064e3b; /* Dark beautiful green */
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-title {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Links */
+.sidebar-links {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-links li {
+  margin-bottom: 15px;
+}
+
+.dashboard-link {
+  display: block;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: #064e3b; /* Dark text inside button */
+  background-color: #22c55e; /* Light green button */
+  padding: 10px 15px;
+  border-radius: 50px; /* Oval pill shape */
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Hover Effect */
+.dashboard-link:hover {
+  background-color: #4ade80; /* Brighter light green */
+  transform: scale(1.05); /* Slight grow effect */
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Main content */
+.main-content {
+  flex: 1;
+  padding: 40px;
+  background-color: #f4f4f4;
+}

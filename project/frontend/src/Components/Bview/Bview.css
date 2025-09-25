@@ -1,0 +1,84 @@
+/* Page background */
+.vbprofile-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #d4fc79, #96e6a1); /* light green gradient */
+}
+
+/* Page title */
+.vbpage-title {
+  margin-bottom: 20px;
+  color: #043300;
+}
+
+/* Table styling */
+.vbprofile-table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #ffffff; /* white table background for contrast */
+}
+
+.vbprofile-table th {
+  background-color: #5bf846;
+  color: rgb(0, 0, 0);
+  padding: 12px 15px;
+  font-size: 14px;
+  text-align: left;
+}
+
+.vbprofile-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #000000;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/* Zebra stripes */
+.vbprofile-table tbody tr:nth-child(even) {
+  background-color: #f0fff0; /* light green for even rows */
+}
+
+.vbprofile-table tbody tr:nth-child(odd) {
+  background-color: #ffffff; /* white for odd rows */
+}
+
+.vbprofile-table tbody tr:hover {
+  background-color: #e6ffe6; /* hover effect */
+}
+
+
+.vbdelete-btn:hover {
+  background-color: darkred;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .vbprofile-table, .vbprofile-table thead, .vbprofile-table tbody, .vbprofile-table th, .vbprofile-table td, .vbprofile-table tr {
+    display: block;
+  }
+
+  .vbprofile-table thead tr {
+    display: none;
+  }
+
+  .vbprofile-table tbody tr {
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ddd;
+    padding: 10px;
+  }
+
+  .vbprofile-table tbody td {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 10px;
+  }
+
+  .vbprofile-table tbody td::before {
+    content: attr(data-label);
+    font-weight: bold;
+  }
+}

@@ -1,0 +1,95 @@
+.payment-card {
+  background: linear-gradient(135deg, #17f75a, #9df59d, #e6ff03);  /* your chosen color */
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  padding: 30px 40px;   /* wider inside spacing */
+  margin: 20px auto;
+  width: 80%;           /* take 80% of the page width */
+  max-width: 1000px;    /* allow large size */
+  min-height: 250px;    /* make it taller */
+  transition: transform 0.2s ease-in-out;
+}
+
+.payment-card:hover {
+  transform: scale(1.01);
+}
+
+.payment-id {
+  color: #000000;
+  font-size: 25px;
+  margin-bottom: 18px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 6px;
+}
+
+.payment-card p {
+  font-size: 21px;
+  margin: 6px 0;
+  color: #111010;
+}
+
+.payment-card a {
+  color: #2600b1;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.payment-card a:hover {
+  text-decoration: underline;
+}
+
+/* Buttons */
+.payment-actions {
+  margin-top: 15px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.delete-btn {
+  background: #ec1800;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.delete-btn:hover {
+  background: #c0392b;
+}
+
+.cancel-btn {
+  background: #f79903;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.cancel-btn:hover {
+  background: #d68910;
+}
+.pay-display-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family:'Times New Roman', Times, serif;
+  padding: 30px 20px;
+  min-height: 100vh;
+  font-size:larger;
+  color:#000000;
+   animation: fadeInDown 1s ease forwards;
+
+  /* Background image */
+  background: url("./paybck.jpg") no-repeat center center fixed;
+  background-size: cover;
+
+
+  
+  margin: 0;
+  padding: 0;
+}

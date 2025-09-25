@@ -1,0 +1,112 @@
+/* Page background */
+.bprofile-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #d4fc79, #96e6a1); /* light green gradient */
+}
+
+/* Page title */
+.bpage-title {
+  margin-bottom: 30px;
+  margin-top: 15px;
+  color: #043300;
+}
+
+/* Table styling */
+.bprofile-table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #ffffff; /* white table background for contrast */
+}
+
+.bprofile-table th {
+  background-color: #5bf846;
+  color: rgb(0, 0, 0);
+  padding: 12px 15px;
+  font-size: 14px;
+  text-align: left;
+}
+
+.bprofile-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #000000;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/* Zebra stripes */
+.bprofile-table tbody tr:nth-child(even) {
+  background-color: #f0fff0; /* light green for even rows */
+}
+
+.bprofile-table tbody tr:nth-child(odd) {
+  background-color: #ffffff; /* white for odd rows */
+}
+
+.bprofile-table tbody tr:hover {
+  background-color: #e6ffe6; /* hover effect */
+}
+
+/* Action buttons */
+.baction-buttons button {
+  margin-right: 5px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.bedit-btn {
+  background-color: #ffc107;
+  color: black;
+  font-size:xx-large;
+  font-weight: bold;
+}
+
+.bedit-btn:hover {
+  background-color: #e0a800;
+}
+
+.bdelete-btn {
+  background-color: red;
+  color: black;
+   font-size:xx-large;
+   font-weight: bold;
+}
+
+.bdelete-btn:hover {
+  background-color: darkred;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .brofile-table, .bprofile-table thead, .bprofile-table tbody, .bprofile-table th, .bprofile-table td, .bprofile-table tr {
+    display: block;
+  }
+
+  .bprofile-table thead tr {
+    display: none;
+  }
+
+  .bprofile-table tbody tr {
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ddd;
+    padding: 10px;
+  }
+
+  .bprofile-table tbody td {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 10px;
+  }
+
+  .bprofile-table tbody td::before {
+    content: attr(data-label);
+    font-weight: bold;
+  }
+}

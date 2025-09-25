@@ -1,0 +1,152 @@
+/* Full page container with background */
+.bcforder-display-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+
+  /* Background settings */
+  background: linear-gradient(135deg, #d4fc79, #96e6a1); /* light green background */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh; /* ensures background covers full page */
+   margin-bottom: 30px;
+  margin-top: 15px;
+}
+
+/* Table styling */
+.bcforder-table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 25px;
+}
+
+.bcforder-table th {
+  background-color: #10aa18;
+  color: white;
+  padding: 12px 15px;
+  font-size: 14px;
+  text-align: left;
+}
+
+.bcforder-table td {
+   padding: 12px 15px;
+  border-bottom: 1px solid #000000;
+  font-size: 14px;
+  font-weight: bold;
+ 
+}
+
+/* Zebra stripes for rows */
+.bcforder-table tbody tr:nth-child(even) {
+  background-color: #ffffff; /* light green for even rows */
+}
+
+.bcforder-table tbody tr:nth-child(odd) {
+  background-color: #f1faf1; /* white for odd rows */
+}
+
+.bcforder-table tbody tr:hover {
+  background-color: #c9e7c9; /* hover effect */
+}
+
+/* Action buttons container */
+.bcfaction-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 buttons per row */
+  gap: 8px; /* space between buttons */
+}
+
+/* All buttons inside action-buttons have same size */
+.bcfaction-buttons button {
+  padding: 9px 0;
+  font-size: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  min-width: 80px; /* ensures all buttons have same minimum width */
+  width: 100%;     /* fill the grid column width equally */
+  box-sizing: border-box; /* include padding in width */
+   font-weight: bold;
+}
+
+/* Individual button colors */
+.bcfupdate-btn {
+  background-color: #ff8800;
+  color: rgb(253, 241, 241);
+}
+
+.bcfupdate-btn:hover {
+  background-color: #f59e2d;
+}
+
+.bcfpay-btn {
+  background-color: #1976d2;
+  color: white;
+}
+
+.bcfpay-btn:hover {
+  background-color: #2f8fe9;
+}
+
+.bcfcancel-btn {
+  background-color: #15cf0f;
+  color: white;
+}
+
+.bcfcancel-btn:hover {
+  background-color: #1d8b0fc0;
+}
+
+.bcfdownload-btn {
+  background-color: #0aa82f;
+  color: white;
+}
+
+.bcfdownload-btn:hover {
+  background-color: #4ff773;
+}
+
+.bcfdelete-btn {
+  background-color: rgb(255, 0, 0);
+  color: white;
+}
+
+.bcfdelete-btn:hover {
+  background-color: darkred;
+}
+
+/* Responsive for mobile */
+@media screen and (max-width: 768px) {
+  .bcforder-table, .bcforder-table thead, .bcforder-table tbody, .bcforder-table th, .bcforder-table td, .bcforder-table tr {
+    display: block;
+  }
+
+  .bcforder-table thead tr {
+    display: none;
+  }
+
+  .bcforder-table tbody tr {
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ddd;
+    padding: 10px;
+  }
+
+  .bcforder-table tbody td {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 10px;
+  }
+
+  .bcforder-table tbody td::before {
+    content: attr(data-label);
+    font-weight: bold;
+  }
+
+  /* Mobile: buttons stack full width */
+  .bcfaction-buttons {
+    grid-template-columns: 1fr; 
+  }
+}

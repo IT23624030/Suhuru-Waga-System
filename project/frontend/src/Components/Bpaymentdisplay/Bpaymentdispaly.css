@@ -1,0 +1,90 @@
+/* Page background */
+.bpay-display-container {
+  padding: 20px;
+  font-family: Arial, sans-serif; 
+  background: linear-gradient(135deg, #d4fc79, #96e6a1); /* light green gradient */
+  min-height: 100vh; /* full page height */
+  margin-top: 20px;
+ 
+}
+
+/* Table styling */
+.bpayment-table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+   margin-top: 20px;
+}
+
+.bpayment-table th {
+  background-color: #10aa18;
+  color: white;
+  padding: 12px 15px;
+  text-align: left;
+  font-size: 16px;
+}
+
+.bpayment-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #000000;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Zebra stripes for rows */
+.bpayment-table tbody tr:nth-child(even) {
+  background-color: #ffffff; /* light green for even rows */
+}
+
+.bpayment-table tbody tr:nth-child(odd) {
+  background-color: #fcfcfc; /* white for odd rows */
+}
+
+.bpayment-table tbody tr:hover {
+  background-color: #75ff62; /* hover effect */
+}
+
+/* Delete button */
+.bdelete-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.bdelete-btn:hover {
+  background-color: darkred;
+}
+
+/* Responsive for small screens */
+@media screen and (max-width: 768px) {
+  .bpayment-table, .bpayment-table thead, .bpayment-table tbody, .bpayment-table th, .bpayment-table td, .bpayment-table tr {
+    display: block;
+  }
+
+  .bpayment-table thead tr {
+    display: none;
+  }
+
+  .bpayment-table tbody tr {
+    margin-bottom: 15px;
+    border-bottom: 2px solid #000000;
+    padding: 10px;
+  }
+
+  .bpayment-table tbody td {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 10px;
+  }
+
+  .bpayment-table tbody td::before {
+    content: attr(data-label);
+    font-weight: bold;
+  }
+}

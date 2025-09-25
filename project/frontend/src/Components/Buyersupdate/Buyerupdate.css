@@ -1,0 +1,113 @@
+/* Page background */
+.byupage-wrapper {
+  background: linear-gradient(135deg, #d4fc79, #96e6a1);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 50px 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Form container */
+.byuupdate-form-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Form card */
+.byuupdate-form {
+  background-color: #ffffff; /* light agriculture green */
+  padding: 35px 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Form Title */
+.byuupdate-form h1 {
+  text-align: center;
+  color: #16a31d; /* deep green */
+  margin-bottom: 25px;
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Form rows */
+.byuform-row {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Labels */
+.byuform-row label {
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 6px;
+  font-size: 16px;
+}
+
+/* Inputs */
+.byuform-row input {
+  padding: 12px 14px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #111;
+  border: 1px solid #9ca3af;
+  border-radius: 8px;
+  background-color: #ecfdf5;
+  transition: all 0.3s ease;
+}
+
+.byuform-row input:focus {
+  border-color: #003d16;
+  background-color: #bbf7d0;
+  outline: none;
+  box-shadow: 0 0 6px rgba(22, 163, 74, 0.3);
+}
+
+/* Form actions */
+.byuform-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Submit button */
+.byuform-actions button {
+  padding: 12px 35px;
+  background: linear-gradient(135deg, #14881a, #138d3f,green);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.byuform-actions button:hover {
+  background: linear-gradient(135deg, #16a34a, #22c55e);
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
